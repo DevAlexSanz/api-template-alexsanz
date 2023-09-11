@@ -1,47 +1,32 @@
 # api-template-alexsanz 🚀
 
-This is a small example and template of a REST API with Node.js, Express.js and MongoDB.
+Este es un pequeño ejemplo y plantilla de una API REST de JavaScript.
 
-## Programming Language:
+## Tecnologías utilizadas:
 
-[![My Skills](https://skillicons.dev/icons?i=javascript&perline=3)](https://skillicons.dev)
+[![Tecnologias](https://skillicons.dev/icons?i=javascript,nodejs,mongodb&perline=3)](https://skillicons.dev)
 
-## Framework:
+## Requisitos Previos
 
-[![My Skills](https://skillicons.dev/icons?i=nodejs&perline=3)](https://skillicons.dev)
+Antes de comenzar con la instalación y uso de esta plantilla, asegúrate de tener lo siguiente instalado en tu sistema:
 
-## Database:
+1. **Node.js y npm:** Asegúrate de tener Node.js y npm instalados en tu máquina. Puedes descargarlos desde [nodejs.org](https://nodejs.org/).
 
-[![My Skills](https://skillicons.dev/icons?i=mongodb&perline=3)](https://skillicons.dev)
+2. **Git:** Necesitarás tener Git instalado en tu sistema. Puedes descargarlo desde [git-scm.com](https://git-scm.com/).
 
-## IDEs and Tools:
+Si no estás seguro de si tienes estas herramientas instaladas, puedes verificarlo ejecutando los siguientes comandos en tu terminal:
 
-[![My Skills](https://skillicons.dev/icons?i=vscode,github&perline=3)](https://skillicons.dev)
+```sh
+node -v
+npm -v
+git --version
+```
 
-## Steps:
+## Instalación
 
-1. Run the following command:
+Para crear una nueva API utilizando esta plantilla, simplemente ejecuta el siguiente comando en tu terminal:
 
-```bash
+```sh
 npx api-template-alexsanz
 ```
-
-2. Now, enter the letter 'y' and press the enter key
-
-3. inside the folder called 'template' is the API code
-
-4. Execute:
-
-```bash
-npm install
-```
-
-4. rename the .env.example file to just .env, then add your database connection address (MongoDB URI)
-
-5. To finish execute:
-
-```bash
-npm run dev
-```
-
-Created with love for everybody 💙
+### Creado con Amor ❤️
