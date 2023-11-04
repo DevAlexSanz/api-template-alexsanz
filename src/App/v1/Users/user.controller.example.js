@@ -1,7 +1,7 @@
 import mongoose from 'mongoose';
 import userModel from './user.model.example.js';
 
-// Get all users
+// Get all Users
 export const getAllUsers = async (request, response) => {
   try {
     const users = await userModel.find();
@@ -20,7 +20,7 @@ export const getAllUsers = async (request, response) => {
   }
 };
 
-// Get user by ID
+// Get User by ID
 export const getUserById = async (request, response) => {
   const { id } = request.params;
 
@@ -31,7 +31,7 @@ export const getUserById = async (request, response) => {
       code: 400,
     });
   }
-  // Check if the user exists in the database.
+  // Check if the User exists in the database.
   const user = await userModel.findById(id);
 
   if (!user) {
@@ -57,7 +57,7 @@ export const getUserById = async (request, response) => {
   }
 };
 
-// Create a new user
+// Create a new User
 export const createUser = async (request, response) => {
   const { name, age, email } = request.body;
 
@@ -69,7 +69,7 @@ export const createUser = async (request, response) => {
     });
   }
 
-  // Check if email already exists in database
+  // Check if Email already exists in database
   const userExists = await userModel.findOne({ email });
 
   if (userExists) {
@@ -101,12 +101,11 @@ export const createUser = async (request, response) => {
   }
 };
 
-// update an existing user
+// Update an existing User
 export const updateUser = async (request, response) => {
   const { id } = request.params;
   const payload = request.body;
 
-  // validate if the ID format is correct
   if (!mongoose.Types.ObjectId.isValid(id)) {
     return response.status(400).json({
       message: 'The ID format type entered is invalid',
@@ -114,7 +113,6 @@ export const updateUser = async (request, response) => {
     });
   }
 
-  // Check if the user exists in the database.
   const user = await userModel.findById(id);
   if (!user) {
     return response.status(404).json({
@@ -151,10 +149,10 @@ export const updateUser = async (request, response) => {
   }
 };
 
+// Delete an existing User
 export const deleteUser = async (request, response) => {
   const { id } = request.params;
 
-  // validate if the ID format is correct
   if (!mongoose.Types.ObjectId.isValid(id)) {
     return response.status(400).json({
       code: 400,
@@ -162,7 +160,6 @@ export const deleteUser = async (request, response) => {
     });
   }
 
-  // Check if the user exists in the database
   const user = await userModel.findById(id);
   if (!user) {
     return response.status(404).json({

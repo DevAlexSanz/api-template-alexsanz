@@ -9,7 +9,7 @@ import { initializeDB } from '../Database/database.js';
 import { enviromentConfig } from '../Config/config.js';
 
 const app = express();
-const { port, url } = enviromentConfig;
+const { port, url, corsOptions } = enviromentConfig;
 
 const initializeServer = async (apiRoutes) => {
   try {
@@ -21,16 +21,21 @@ const initializeServer = async (apiRoutes) => {
 
     // Middlewares
     app.use(express.json());
+
+    // If you want to use custom sources for CORS, uncomment the following line of code:
+    // app.use(cors(corsOptions));
+    // and remove this:
     app.use(cors());
+
     app.use(morgan('dev'));
 
     // App listen
     await app.listen(port, () => {
       console.log(
         '===========================================================\n' +
-        `                Server listening and running\n` +
-        '===========================================================\n' +
-        `Access the server at: ${url}${port}`
+          `                Server listening and running\n` +
+          '===========================================================\n' +
+          `Access the server at: ${url}${port}`
       );
     });
 
@@ -46,9 +51,9 @@ const initializeServer = async (apiRoutes) => {
   } catch (err) {
     console.log(
       '===========================================================\n' +
-      `                Could not start the server\n` +
-      '===========================================================\n' +
-      `Error: ${err.message}`
+        `                Could not start the server\n` +
+        '===========================================================\n' +
+        `Error: ${err.message}`
     );
   }
 };

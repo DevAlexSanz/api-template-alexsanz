@@ -1,20 +1,20 @@
 # api-template-alexsanz 🚀
 
-Este es un pequeño ejemplo y plantilla de una API REST de JavaScript.
+This is a small example and template of a JavaScript REST API.
 
-## Tecnologías utilizadas:
+## Technology used:
 
-[![Tecnologias](https://skillicons.dev/icons?i=javascript,nodejs,mongodb&perline=3)](https://skillicons.dev)
+[![Technologies](https://skillicons.dev/icons?i=javascript,nodejs,mongodb&perline=3)](https://skillicons.dev)
 
-## Requisitos Previos
+## Previous requirements
 
-Antes de comenzar con la instalación y uso de esta plantilla, asegúrate de tener lo siguiente instalado en tu sistema:
+Before you start installing and using this template, make sure you have the following installed on your system:
 
-1. **Node.js y npm:** Asegúrate de tener Node.js y npm instalados en tu máquina. Puedes descargarlos desde [nodejs.org](https://nodejs.org/).
+1. **Node.js and npm:** Make sure you have Node.js and npm installed on your machine. You can download them from [nodejs.org](https://nodejs.org/).
 
-2. **Git:** Necesitarás tener Git instalado en tu sistema. Puedes descargarlo desde [git-scm.com](https://git-scm.com/).
+2. **Git:** You will need to have Git installed on your system. You can download it from [git-scm.com](https://git-scm.com/).
 
-Si no estás seguro de si tienes estas herramientas instaladas, puedes verificarlo ejecutando los siguientes comandos en tu terminal:
+If you are not sure if you have these tools installed, you can check by running the following commands in your terminal:
 
 ```sh
 node -v
@@ -22,11 +22,16 @@ npm -v
 git --version
 ```
 
-## Instalación
+## Installation
 
-Para crear una nueva API utilizando esta plantilla, simplemente ejecuta el siguiente comando en tu terminal:
+To create a new API using this template, simply run the following command in your terminal:
 
 ```sh
-npx api-template-alexsanz
+template-api-npx-alexsanz
 ```
-### Creado con Amor ❤️
+
+Next, you must enter a name for the folder that will store the content of the template.
+
+Now you can use the template!
+
+### Created with Love ❤️
