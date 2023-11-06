@@ -7,9 +7,9 @@ export const environmentConfig = {
   url: process.env.URL || 'http://localhost:',
   corsOptions: {
     origin: function (origin, callback) {
-      const allowedOrigins = process.env.CORS_ORIGIN.split(',');
+      const originsWhitelist = process.env.ORIGINS_WHITELIST.split(',');
 
-      if (allowedOrigins.includes(origin) || !origin) {
+      if (originsWhitelist.includes(origin) || !origin) {
         return callback(null, true);
       }
 
