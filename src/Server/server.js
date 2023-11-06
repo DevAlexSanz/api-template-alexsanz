@@ -6,10 +6,10 @@ import cors from 'cors';
 // that arrive at the server to know their status
 import morgan from 'morgan';
 import { initializeDB } from '../Database/database.js';
-import { enviromentConfig } from '../Config/config.js';
+import { environmentConfig } from '../Config/config.js';
 
 const app = express();
-const { port, url, corsOptions } = enviromentConfig;
+const { port, url, corsOptions } = environmentConfig;
 
 const initializeServer = async (apiRoutes) => {
   try {

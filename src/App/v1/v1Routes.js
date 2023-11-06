@@ -1,10 +1,10 @@
 import { Router } from 'express';
-import { enviromentConfig } from '../../Config/config.js';
+import { environmentConfig } from '../../Config/config.js';
 import userRoutes from './Users/user.routes.example.js';
 
 const router = Router();
 
-const { port, url } = enviromentConfig;
+const { port, url } = environmentConfig;
 
 router.use('/users', userRoutes);
 

@@ -2,7 +2,7 @@ import dotenv from 'dotenv';
 
 dotenv.config();
 
-export const enviromentConfig = {
+export const environmentConfig = {
   port: process.env.PORT || 9000,
   url: process.env.URL || 'http://localhost:',
   corsOptions: {

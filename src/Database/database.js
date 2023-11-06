@@ -1,16 +1,16 @@
 import mongoose from 'mongoose';
-import { enviromentConfig } from '../Config/config.js';
+import { environmentConfig } from '../Config/config.js';
 
 export const initializeDB = async () => {
   try {
-    const { database } = enviromentConfig;
+    const { database } = environmentConfig;
     const { uri, options } = database;
 
     await mongoose.connect(uri, options);
 
     console.log(
       '===========================================================\n' +
-      '               MongoDB Connection Succesfully'
+      '               MongoDB Connection Successfully'
     );
 
     return mongoose;
